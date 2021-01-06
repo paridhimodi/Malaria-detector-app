@@ -14,6 +14,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
 flask
+setuptools==0.7.3
 Flask-Cors==3.0.8
 gast==0.3.3
 geojson==2.5.0
