@@ -5,17 +5,17 @@ backcall==0.1.0
 bleach==3.1.5
 cachetools==4.1.0
 certifi==2020.6.20
-ca-certificates-2020.10.14
-chardet==3.0.4
 click==7.1.2
 colorama==0.4.3
 cycler==0.10.0
+distlib==0.3.0
 decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
-flask
-setuptools==0.7.3
+Flask ==1.1.2
+gunicorn==20.0.4
 Flask-Cors==3.0.8
+setuptools==0.7.3
 gast==0.3.3
 geojson==2.5.0
 google-auth==1.15.0
@@ -28,10 +28,10 @@ gevent
 pillow
 h5py
 tensorflow
-gunicorn==20.0.4
 itsdangerous==1.1.0
 Jinja2==2.11.2
 joblib==0.15.1
+pandas==1.0.1
 MarkupSafe==1.1.1
 python-dateutil==2.8.1
 pytz==2019.3
