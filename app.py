@@ -12,6 +12,7 @@ from tensorflow.keras.preprocessing import image
 
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
+from flask_cors import cross_origin
 
 
 app = Flask(__name__)
@@ -32,19 +33,21 @@ def predict(img_path, model):
     preds = model.predict(x)
     preds = np.argmax(preds, axis=1)
     if preds == 0:
-        preds = "The Person is Infected With Maleria"
+        preds = "The Person is Infected With Malaria"
     else:
         preds = "The Person is not Infected With Malaria"
 
     return preds
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
+@cross_origin()
 def index():
     return render_template('index.html')
 
 
 @app.route('/predict', methods=['GET', 'POST'])
+@cross_origin()
 def upload():
     if request.method == 'POST':
         fl = request.files['file']
